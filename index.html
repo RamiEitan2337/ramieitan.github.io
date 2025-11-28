@@ -1,94 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Yael Eitan - Consultant for Israeli Consulate Matters</title>
-<style>
-body {
-font-family: Arial, sans-serif;
-margin: 0;
-padding: 0;
-background: #f2f4f8;
-color: #333;
-}
-header {
-background: #003366;
-color: #fff;
-padding: 50px 20px;
-text-align: center;
-}
-header h1 {
-margin: 0;
-font-size: 2.6rem;
-}
-header p {
-margin-top: 10px;
-font-size: 1.25rem;
-opacity: 0.95;
-}
-section {
-max-width: 900px;
-margin: 40px auto;
-padding: 25px 30px;
-background: #fff;
-border-radius: 12px;
-box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
-section h2 {
-margin-top: 0;
-color: #003366;
-}
-ul {
-line-height: 1.7;
-}
-footer {
-text-align: center;
-color: #666;
-padding: 20px 0 40px;
-margin-top: 40px;
-}
-</style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yael Eitan - Consultant for Israeli Consulate Matters</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f2f4f8;
+            color: #333;
+        }
+        header {
+            background: #003366;
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.6rem;
+        }
+        header p {
+            margin-top: 10px;
+            font-size: 1.25rem;
+            opacity: 0.95;
+        }
+        section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 25px 30px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+        section h2 {
+            margin-top: 0;
+            color: #003366;
+        }
+        .about-flex {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .about-flex img {
+            max-width: 180px;
+            border-radius: 10px;
+        }
+        .about-text {
+            flex: 1;
+        }
+        section h2 {
+            margin-top: 0;
+            color: #003366;
+        }
+        ul {
+            line-height: 1.7;
+        }
+        footer {
+            text-align: center;
+            color: #666;
+            padding: 20px 0 40px;
+            margin-top: 40px;
+        }
+            .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 220px;
+            height: 100vh;
+            background: #00264d;
+            color: #fff;
+            padding: 30px 20px;
+            box-sizing: border-box;
+        }
+        .sidebar h2 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            padding-bottom: 10px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+        .sidebar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            margin-left: 260px;
+            padding: 20px;
+        }
+            .page-section {
+            display: none;
+        }
+        .page-section.active {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-<header>
-<h1>Yael Eitan</h1>
-<p>Consultant for Israeli Consulate Matters</p>
-</header>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#" onclick="showSection('about'); return false;">About</a></li>
+            <li><a href="#" onclick="showSection('services'); return false;">Services</a></li>
+            <li><a href="#" onclick="showSection('contact'); return false;">Contact Us</a></li>
+            <li><a href="#" onclick="showSection('reviews'); return false;">Reviews</a></li>
+        </ul>
+    </div>
 
+    <div class="content">
+        <header>
+            <h1>Yael Eitan</h1>
+            <p>Consultant for Israeli Consulate Matters</p>
+        </header>
 
-<section>
-<h2>My Services</h2>
-<h3>Translation Services</h3>
-<p>
-We specialize in translating documents from Hebrew to English for use at the Israeli consulate.
-Our translations are accurate and professional, ensuring your documents meet consulate standards.
-We also offer consulting services to assist you in navigating the consulate's requirements and procedures.
-</p>
+        <section id="services" class="page-section">
+            <h2>My Services</h2>
+            <h3>Translation Services</h3>
+            <p>
+                We specialize in translating documents from Hebrew to English for use at the Israeli consulate.
+                Our translations are accurate and professional, ensuring your documents meet consulate standards.
+                We also offer consulting services to assist you in navigating the consulate's requirements and procedures.
+            </p>
 
+            <h3>Legal Certificates and Apostille Seals</h3>
+            <p>
+                We can assist you in obtaining legal certificates to be used by the consulate, including Apostille seals.
+                We can also help obtain legal documents from the Israeli consulate.
+            </p>
 
-<h3>Legal Certificates and Apostille Seals</h3>
-<p>
-We assist in obtaining legal certificates required by the consulate, including Apostille seals.
-Additionally, we can help secure legal documents directly from the Israeli consulate.
-</p>
+            <h3>Citizenship Consulting</h3>
+            <p>
+                Our team guides you through the process of registering as an Israeli citizen, providing expert advice
+                and support every step of the way.
+            </p>
+        </section>
 
+        <section id="about" class="page-section">
+            <h2>About Yael Eitan</h2>
+            <div class="about-flex">
+                <img src="about-yael.png" alt="About Image">
+                <div class="about-text">
+                    <p>
+                        Yael Eitan is a consultant specializing in all matters related to the Israeli consulate.
+                        As a former Vice Consul for Consular Affairs, Yael brings deep expertise in consular
+                        procedures and requirements. Her mission is to provide clients with the highest level of
+                        service, helping them achieve their goals quickly and efficiently.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-<h3>Citizenship Consulting</h3>
-<p>
-Our team guides you through the process of registering as an Israeli citizen, providing expert advice
-and support every step of the way.
-</p>
-</section>
+        <section id="contact" class="page-section">
+            <h2>Contact Us</h2>
+            <p>Please reach out for assistance with any Israeli consulate matters. We're here to help.</p>
+        </section>
 
+        <section id="reviews" class="page-section">
+            <h2>Reviews</h2>
+            <p>Client testimonials and feedback will be displayed here.</p>
+        </section>
 
-<section>
-<h2>About Yael Eitan</h2>
-<p>
-Yael Eitan is a consultant specializing in all matters related to the Israeli consulate.
-As a former Vice Consul for Consular Affairs, Yael brings deep expertise in consular
-procedures and requirements. Her mission is to provide clients with the highest level of
-service, helping them achieve their goals quickly and efficiently.
-</p>
-</section>
+        <footer>
+            <img src="footer-tlv.png" alt="Footer Logo" style="width:100%; height:auto; margin-bottom:10px; display:block; margin-left:auto; margin-right:auto;">
+            <br>
+            © 2025 Yael Eitan — Israeli Consulate Consulting Services
+        </footer>
+    </div>
+    <script>
+        function showSection(id) {
+            const sections = document.querySelectorAll('.page-section');
+            sections.forEach(section => section.classList.remove('active'));
+
+            const el = document.getElementById(id);
+            if (el) {
+                el.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            showSection('about');
+        });
+    </script>
+</body>
 </html>
